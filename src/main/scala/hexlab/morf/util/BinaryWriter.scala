@@ -1,6 +1,6 @@
 /*
- * This file is part of PlayBnS
- *                      <https://github.com/HeXLaB/play.bns>
+ * This file is part of M.O.R.F.
+ *                      <https://github.com/HeXLaB/M.O.R.F.>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
