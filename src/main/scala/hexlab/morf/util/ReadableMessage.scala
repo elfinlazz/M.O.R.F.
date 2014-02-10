@@ -1,6 +1,6 @@
 /*
- * This file is part of M.O.R.F.
- *                      <https://github.com/HeXLaB/M.O.R.F.>
+ * This file is part of PlayBnS
+ *                      <https://github.com/HeXLaB/play.bns>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -27,30 +27,6 @@ package hexlab.morf.util
  *
  * @author hex1r0
  */
-object ByteArray {
-  type ByteArray = Array[Byte]
-
-  def apply(length: Int) = {
-    new Array[Byte](length)
-  }
-
-  def apply(hex: String) = {
-    HexUtil.fromHex(hex)
-  }
-
-  // TODO
-  //    def apply(bytes: Seq[Int]) = {
-  //
-  //    }
-
-  def fromHex(hex: String) = {
-    HexUtil.fromHex(hex)
-  }
-
-  implicit class ByteArrayObjectExt(obj: Array.type) {
-    def fromHex(hex: String) = {
-      ByteArray.fromHex(hex)
-    }
-  }
+trait ReadableMessage {
+  def readImpl()
 }
-

@@ -32,4 +32,5 @@ import org.slf4j.LoggerFactory
  */
 object Log {
   def apply[T: ClassTag] = LoggerFactory.getLogger(Erasure[T])
+  def apply(name: String) = LoggerFactory.getLogger(name)
 }

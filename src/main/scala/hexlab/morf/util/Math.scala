@@ -51,13 +51,12 @@ object Math {
   def limit(min: Double, value: Double, max: Double): Double = jMath.max(min, jMath.min(value, max))
 
   /**
-   * @param base
-	 * the base
-   * @param exponent
-	 * the <b>NON-NEGATIVE INTEGER</b> exponent
+   * @param base the base
+   * @param exponent the <b>NON-NEGATIVE INTEGER</b> exponent
+   *
    * @return <code>base<sup>exponent</sup></code>
-   * @throws IllegalArgumentException
-	 * if the exponent is negative
+   *
+   * @throws IllegalArgumentException if the exponent is negative
    */
   def pow(base: Int, exponent: Int): Long = {
     if (exponent < 0) {
@@ -66,7 +65,7 @@ object Math {
 
     var result: Long = 1
     var e = exponent
-    while(e > 0) {
+    while (e > 0) {
       result *= base
       e -= 1
     }
@@ -74,13 +73,12 @@ object Math {
     result
   }
   /**
-   * @param base
-	 * the base
-   * @param exponent
-	 * the <b>NON-NEGATIVE INTEGER</b> exponent
+   * @param base the base
+   * @param exponent the <b>NON-NEGATIVE INTEGER</b> exponent
+   *
    * @return <code>base<sup>exponent</sup></code>
-   * @throws IllegalArgumentException
-	 * if the exponent is negative
+   *
+   * @throws IllegalArgumentException if the exponent is negative
    */
   def pow(base: Double, exponent: Int): Double = {
     if (exponent < 0) {
@@ -89,7 +87,7 @@ object Math {
 
     var result: Double = 1
     var e = exponent
-    while(e > 0) {
+    while (e > 0) {
       result *= base
       e -= 1
     }
