@@ -29,9 +29,9 @@ import Reflection._
  *
  * @author hex1r0
  */
-object ConfigFactory {
+object ConfigUtil {
   def loadAllFrom(root: String, parent: Class[_], packageName: String) = {
-    val m = scala.reflect.runtime.universe.runtimeMirror(ConfigFactory.getClass.getClassLoader)
+    val m = scala.reflect.runtime.universe.runtimeMirror(ConfigUtil.getClass.getClassLoader)
     val all = parsePackage(parent, packageName) map {
       clazz => Config.load(root, m, clazz)
     }
@@ -40,7 +40,7 @@ object ConfigFactory {
   }
 
   def createAllFrom(root: String, parent: Class[_], packageName: String) = {
-    val m = scala.reflect.runtime.universe.runtimeMirror(ConfigFactory.getClass.getClassLoader)
+    val m = scala.reflect.runtime.universe.runtimeMirror(ConfigUtil.getClass.getClassLoader)
     parsePackage(parent, packageName).map(clazz => Config.create(root, m, clazz)).toList
   }
 }
